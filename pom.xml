@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<parent>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-parent</artifactId>
+		<version>3.5.15</version>
+		<relativePath/>
+	</parent>
+
+	<groupId>com.cragent</groupId>
+	<artifactId>cragent-main</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<packaging>pom</packaging>
+
+	<name>cragent-main</name>
+	<description>Spring AI Alibaba based RAG system</description>
+
+	<modules>
+		<module>rag-common</module>
+		<module>rag-intent</module>
+		<module>rag-retrieve</module>
+		<module>rag-prompt</module>
+		<module>rag-memory</module>
+		<module>rag-boot</module>
+	</modules>
+
+	<properties>
+		<java.version>21</java.version>
+		<spring-ai.version>1.1.8</spring-ai.version>
+		<spring-ai-alibaba.version>1.1.2.1</spring-ai-alibaba.version>
+	</properties>
+
+	<dependencyManagement>
+		<dependencies>
+			<dependency>
+				<groupId>org.springframework.ai</groupId>
+				<artifactId>spring-ai-bom</artifactId>
+				<version>${spring-ai.version}</version>
+				<type>pom</type>
+				<scope>import</scope>
+			</dependency>
+			<dependency>
+				<groupId>com.alibaba.cloud.ai</groupId>
+				<artifactId>spring-ai-alibaba-starter-dashscope</artifactId>
+				<version>${spring-ai-alibaba.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>com.cragent</groupId>
+				<artifactId>rag-common</artifactId>
+				<version>${project.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>com.cragent</groupId>
+				<artifactId>rag-intent</artifactId>
+				<version>${project.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>com.cragent</groupId>
+				<artifactId>rag-retrieve</artifactId>
+				<version>${project.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>com.cragent</groupId>
+				<artifactId>rag-prompt</artifactId>
+				<version>${project.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>com.cragent</groupId>
+				<artifactId>rag-memory</artifactId>
+				<version>${project.version}</version>
+			</dependency>
+		</dependencies>
+	</dependencyManagement>
+
+	<build>
+		<pluginManagement>
+			<plugins>
+				<plugin>
+					<groupId>org.springframework.boot</groupId>
+					<artifactId>spring-boot-maven-plugin</artifactId>
+				</plugin>
+			</plugins>
+		</pluginManagement>
+	</build>
+</project>

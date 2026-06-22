@@ -1,0 +1,71 @@
+# Maven / Java build output
+target/
+**/target/
+build/
+**/build/
+out/
+*.class
+*.jar
+*.war
+*.ear
+
+# Maven wrapper
+.mvn/wrapper/maven-wrapper.jar
+
+# Logs and runtime files
+logs/
+*.log
+*.pid
+*.seed
+*.hprof
+hs_err_pid*
+replay_pid*
+
+# Local environment and secrets
+.env
+.env.*
+!.env.example
+application-*.local.yml
+application-*.local.yaml
+application-*.local.properties
+
+# Docker local state
+.docker/
+docker-data/
+postgres-data/
+redis-data/
+
+# IDEs
+.idea/
+*.iws
+*.iml
+*.ipr
+.classpath
+.factorypath
+.project
+.settings/
+.springBeans
+.sts4-cache/
+.apt_generated/
+
+# VS Code: keep shared settings, ignore personal workspace state
+.vscode/*
+!.vscode/settings.json
+!.vscode/extensions.json
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Test and coverage reports
+surefire-reports/
+failsafe-reports/
+jacoco.exec
+coverage/
+
+# Temporary files
+*.tmp
+*.temp
+*.swp
+*.swo
+*~
