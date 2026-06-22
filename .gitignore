@@ -25,9 +25,15 @@ replay_pid*
 .env
 .env.*
 !.env.example
+application-local.yml
+application-local.yaml
+application-local.properties
 application-*.local.yml
 application-*.local.yaml
 application-*.local.properties
+!application-local.example.yml
+!application-local.example.yaml
+!application-local.example.properties
 
 # Docker local state
 .docker/
